@@ -1,10 +1,10 @@
 <template>
     <main>
-      <h1>Настройки</h1>
+     <h1>Настройки</h1>
       <select class="sel" @change="onChange($event)">
-        <option value="BTCUSDT" >BTCUSDT</option>
-        <option value="BNBBTC" >BNBBTC</option>
-        <option value="ETHBTC" >ETHBTC</option>    
+        <option value="btcusdt" >BTCUSDT</option>
+        <option value="bnbbtc" >BNBBTC</option>
+        <option value="ethbtc" >ETHBTC</option>    
       </select>
       <h2>Блог</h2>
         <ol>
@@ -34,20 +34,21 @@ function onChange(event) {
 
       sost.value=event.target.value
       lastsost.value=arr.value[arr.value.length - 1]
-      arr.value.push({"lastsost":lastsost.value?.sost,"sost":sost.value,"time":time.value})     
-     
+          
+      arr.value.push({"lastsost":lastsost.value?.sost,"sost":sost.value,"time":time.value})
       localStorage.setItem("object", JSON.stringify(arr.value));
       arr.value = JSON.parse(localStorage.getItem("object"));
-      console.log('arr.value'+arr.value);       
+          
       
       store.commit('rest',event.target.value)
-    
+      store.commit('openws')
     }    
 
 
-if(JSON.parse(localStorage.getItem("object"))!='null'){
-     arr.value = JSON.parse(localStorage.getItem("object"));
-}
+if(JSON.parse(localStorage.getItem("object"))!=null){
+   arr.value = JSON.parse(localStorage.getItem("object"));
+ }
+
  
 
 </script>
@@ -65,7 +66,6 @@ main{
     margin-bottom: 20px;
   }
   select{
-    width: 10%;
     margin: auto;
     margin-bottom: 50px;
     }
