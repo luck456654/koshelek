@@ -3,7 +3,7 @@
 <img class="container__img" src="@/assets/logo.png">
 <ul>
     <li>
-        <router-link to="/settings">Настройки</router-link>
+        <router-link to="/">Настройки</router-link>
     </li>
     <li>
         <router-link to="/order">Order Book</router-link>

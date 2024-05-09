@@ -14,7 +14,7 @@ const router = createRouter({
         component: OrderBookView
       },      
       {
-        path: '/settings',
+        path: '/',
         component: SettingsView
       }],
   history: createWebHistory()

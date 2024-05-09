@@ -1,3 +1,3 @@
 <template>
-    <div>футер</div>  
+    <div></div>  
 </template>
