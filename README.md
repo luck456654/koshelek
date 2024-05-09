@@ -1,2 +1,2 @@
-<h1>Тестовое задание на Vue3+WSS</h1>
-Демо - https://luck456654.github.io/koshelek/
+<b>Тестовое задание на Vue3+WSS</b>
+<p>Демо - https://luck456654.github.io/koshelek/</p>
