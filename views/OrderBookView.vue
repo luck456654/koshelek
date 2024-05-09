@@ -11,10 +11,10 @@
       
       <div class="wrapper">  
         <div class="wrapperbids">
-      <table>
-        <tbody>
-            <th>Bids</th>
-            <tr>
+          <h2>Bids</h2>
+          <table>
+        <tbody>            
+            <tr class="th">
                 <td>Price</td>
                 <td class="hide">Quantity</td>
                 <td>Total</td>
@@ -28,10 +28,10 @@
       </table>
       </div>
       <div class="wrapperasks">    
+        <h2>Asks</h2>
       <table>
-        <th>Asks</th>
         <tbody>
-            <tr>
+            <tr class="th">
                 <td>Price</td>
                 <td class="hide">Quantity</td>
                 <td>Total</td>
@@ -87,30 +87,39 @@ main{
     color: brown;
     margin-bottom: 20px;
   }
+  h2{
+    color: black;
+  }
   .wrapper{
     display: flex;
     justify-content: space-between;
     padding: 5%;
-    width: 70%;
+    width: 90%;
     margin: auto;
     max-height: 70vh;   
   }
   .wrapperasks,.wrapperbids{
     overflow-y: scroll;
-  }
+    }
   table{
     border-collapse:collapse; 
-    width: 400px;
+    width: 40vw;
   }
   td{
     border: 1px brown solid; 
     padding: 5%;
-    word-break:break-all; 
-  }  
+    word-break:break-all;
+    }  
+  .th{
+  position: sticky;
+  top: 0px;
+  word-break:normal!important;
+  }
   select{
      margin-bottom: 7px;
      max-width: 15vw;
     }
+    
 @media (max-width: 768px){
         .hide{
             display: none;

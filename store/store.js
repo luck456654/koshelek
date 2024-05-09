@@ -54,7 +54,15 @@ const store = createStore({
             if(resb==true){
               state.evdata.b.forEach(el => {
                 Object.assign({}, el);
-                state.bids.push(el)  
+                state.bids.push(el)
+                
+                if(state.bids.length>state.pos){
+                  state.bids.splice(0, state.bids.length-state.pos);
+                  }
+
+                if(state.asks.length>state.pos){
+                 state.asks.splice(0, state.asks.length-state.pos);
+                  }  
               });
             }
              
